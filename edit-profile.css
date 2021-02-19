@@ -61,14 +61,24 @@ body {
   max-width: 30vw;
   margin: 7rem auto;
 }
+#cardBody,
+#maturity {
+  border-color: grey !important;
+}
 
-#editIcon {
-  top: 82%;
-  left: 7%;
+#editIconLink {
+  top: 76%;
+  left: 2%;
 }
 /* #profilePic img {
   min-width: 168px;
 } */
+#editIcon {
+  background-color: #000;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
 
 /* name and lingua */
 input[type='text'] {
@@ -82,10 +92,14 @@ input[type='text'] {
   color: #fff;
   outline: none;
 }
+.form-control:focus {
+  box-shadow: none;
+  border-color: unset;
+}
 #selectLanguage {
   width: 63px;
   height: 30px;
-  background-color: #141414;
+  background-color: #000;
   border-radius: 1px;
 }
 

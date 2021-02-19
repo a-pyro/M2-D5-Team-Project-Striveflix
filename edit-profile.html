@@ -69,10 +69,13 @@
                     alt=""
                     class="img-fluid rounded"
                   />
-                  <i
-                    class="fas fa-edit position-absolute d-inline-block"
-                    id="editIcon"
-                  ></i>
+                  <a
+                    href="#"
+                    id="editIconLink"
+                    class="text-white position-absolute"
+                  >
+                    <i class="fas fa-edit d-inline-block" id="editIcon"></i>
+                  </a>
                 </div>
               </div>
               <!-- settings --------------------------->
@@ -159,24 +162,26 @@
           </div>
           <!-- BOTTONI ------------------------------------>
           <div class="col-12 pt-4 pl-0" id="cardButtons">
-            <button
-              type="button"
-              class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2 mr-3 save"
-            >
-              save
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2 mr-3"
-            >
-              Cancel
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2 mr-3"
-            >
-              delete profile
-            </button>
+            <div class="buttons-wrapper d-flex flex-nowrap align-items-center">
+              <button
+                type="button"
+                class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2 mr-2 save"
+              >
+                save
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2 mr-2"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2"
+              >
+                delete profile
+              </button>
+            </div>
           </div>
         </div>
       </main>
