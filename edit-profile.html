@@ -103,7 +103,9 @@
                     >
                       ALL MATURITY RATINGS
                     </p>
-                    <p>Show titles of all maturity ratings for this profile.</p>
+                    <p class="text-nowrap">
+                      Show titles of all maturity ratings for this profile.
+                    </p>
                     <button
                       type="button"
                       class="btn btn-outline-dark text-uppercase px-4"
@@ -112,13 +114,50 @@
                     </button>
                   </div>
                   <!-- autoplay controls -->
-                  <div class="col-12 py-3" id="autoplay"></div>
+                  <div class="col-12 py-3" id="autoplay">
+                    <h6>Autoplay controls</h6>
+                    <!-- checkboxes -->
+                    <div class="checkboxes d-flex flex-column">
+                      <div class="form-check mb-2 d-flex align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck1"
+                        />
+                        <label
+                          class="form-check-label ml-3 mt-1"
+                          for="defaultCheck1"
+                        >
+                          Autoplay next episode in a series on all devices.
+                        </label>
+                      </div>
+                      <div class="form-check d-flex align-items-center">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck2"
+                        />
+                        <label
+                          class="form-check-label ml-3 mt-1"
+                          for="defaultCheck2"
+                        >
+                          Autoplay previews whilst browsing on all devices.
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- colonna dei bottoni -->
-          <div class="col-12" id="cardButtons"></div>
+          <div class="col-12 pt-3" id="cardButtons">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+          </div>
         </div>
       </main>
 

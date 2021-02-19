@@ -90,7 +90,7 @@ input[type='text'] {
 }
 
 #maturity p:last-child {
-  font-size: 0.7rem;
+  font-size: 0.2rem;
 }
 
 #maturity button {
@@ -101,4 +101,20 @@ input[type='text'] {
   color: #fff;
   border: 1px solid #fff;
   background-color: transparent;
+}
+
+/* autoplay */
+#autoplay h6 {
+  color: #ccc;
+}
+
+/* custom checkbox */
+#autoplay input[type='checkbox'] {
+  /* visibility: hidden; */
+  width: 30px;
+  height: 30px;
+}
+
+#autoplay .form-check label {
+  cursor: pointer;
 }
