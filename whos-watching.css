@@ -56,3 +56,35 @@ body {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
+.container {
+}
+
+img {
+  border-radius: 8px;
+}
+
+img:hover {
+  border: 3px solid #fff;
+}
+
+.custom-btn {
+  color: grey;
+  border-radius: 1px;
+  transition: none;
+}
+.custom-btn:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+.custom-btn.save {
+  background-color: #fff;
+  color: #141414;
+}
+
+.custom-btn.save:hover {
+  background-color: #cc0000;
+  color: #fff;
+  border-color: #cc0000;
+}
