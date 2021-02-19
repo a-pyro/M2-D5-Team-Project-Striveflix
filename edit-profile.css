@@ -43,8 +43,8 @@ html {
 } */
 
 body {
-  background: var(--clr-light);
-  color: var(--clr-dark);
+  background: #141414;
+  color: #fff;
   font-family: var(--ff-primary);
   /* font-size: var(--fs-body); */
   /* line-height: 1.6; */
@@ -55,3 +55,17 @@ body {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
+
+.edit-profile {
+  /* width: 400px; */
+  /* height: 600px; */
+  /* border: 1px solid white; */
+}
+
+#editIcon {
+  top: 82%;
+  left: 7%;
+}
+/* #profilePic img {
+  min-width: 168px;
+} */

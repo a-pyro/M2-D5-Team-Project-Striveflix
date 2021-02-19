@@ -35,20 +35,62 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <!-- random pick link "https://picsum.photos/300?random=2" -->
+    <!-- random pick link "https://picsum.photos/168?random=2" -->
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="edit-profile.css" />
 
     <title>Hello, world!</title>
   </head>
   <body class="animate__animated animate__fadeIn">
+    <header id="header" class="">
+      <nav class="navbar navbar-light bg-transparent">
+        <a class="navbar-brand" href="index.html">
+          <img src="logo.png" width="92.5" height="" alt="" />
+        </a>
+      </nav>
+    </header>
     <div class="container">
-      <header id="header" class=""></header>
-
-      <main id="main" class=""></main>
+      <main id="main" class="d-flex justify-content-center align-items-center">
+        <!-- riga dove c'è tutta la card -->
+        <div class="row edit-profile">
+          <!-- colonna del titolo -->
+          <div class="col-12 pl-0" id="cardTitle"><h1>Edit Profile</h1></div>
+          <!-- colonna del corpo -->
+          <div class="col-12 border-bottom border-top py-3" id="cardBody">
+            <div class="row">
+              <!-- immagine profilo -->
+              <div class="col-4 pl-0" id="profilePic">
+                <div class="pic-container position-relative">
+                  <img
+                    src="https://picsum.photos/168?random=2"
+                    alt=""
+                    class="img-fluid rounded"
+                  />
+                  <i
+                    class="fas fa-edit position-absolute d-inline-block"
+                    id="editIcon"
+                  ></i>
+                </div>
+              </div>
+              <!-- settings -->
+              <div class="col-8" id="settings">
+                <!-- row con tutte le col dei settings -->
+                <div class="row">
+                  <div class="col-12" id="name"></div>
+                  <div class="col-12" id="maturity"></div>
+                  <div class="col-12" id="autoplay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- colonna dei bottoni -->
+          <div class="col-12" id="cardButtons"></div>
+        </div>
+      </main>
 
       <footer id="footer" class=""></footer>
     </div>
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -60,6 +102,6 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
+    <script src="edit-profile.js"></script>
   </body>
 </html>
