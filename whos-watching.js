@@ -6,6 +6,7 @@ const shit = '💩',
 
 // user
 let watcher = null;
+let editProfileOn = false;
 const imgsDom = document.querySelectorAll('.row img');
 const editProfileBtn = document.getElementById('editProfileBtn');
 
@@ -22,5 +23,7 @@ function setUser(e) {
 }
 
 function triggerEdit(e) {
-  console.log(e.target);
+  editProfileOn = !editProfileOn;
+  console.log(editProfileOn);
+  e.target.classList.toggle('edit-toggled');
 }

@@ -88,3 +88,9 @@ img:hover {
   color: #fff;
   border-color: #cc0000;
 }
+
+.edit-toggled {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
