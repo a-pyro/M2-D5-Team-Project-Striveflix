@@ -335,7 +335,6 @@ function imgSource() {
 console.log(imgDom);
 
 const nav = document.querySelector('nav');
-console.log(nav);
 window.addEventListener('scroll', showNav);
 function showNav() {
   console.log(pageYOffset);
