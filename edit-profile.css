@@ -48,6 +48,7 @@ body {
   font-family: var(--ff-primary);
   /* font-size: var(--fs-body); */
   /* line-height: 1.6; */
+  height: 100vh;
 }
 
 .backdrop-blur {
@@ -56,10 +57,9 @@ body {
   backdrop-filter: blur(10px);
 }
 
-.edit-profile {
-  /* width: 400px; */
-  /* height: 600px; */
-  /* border: 1px solid white; */
+.container-custom {
+  max-width: 30vw;
+  margin: 7rem auto;
 }
 
 #editIcon {
@@ -75,6 +75,12 @@ input[type='text'] {
   background-color: rgb(102, 102, 102);
   border-color: unset;
   border-radius: 1px;
+}
+
+#name > input:focus {
+  background-color: rgb(102, 102, 102);
+  color: #fff;
+  outline: none;
 }
 #selectLanguage {
   width: 63px;
@@ -93,11 +99,12 @@ input[type='text'] {
   font-size: 0.2rem;
 }
 
-#maturity button {
+.custom-btn {
   color: grey;
   border-radius: 1px;
+  transition: none;
 }
-#maturity button:hover {
+.custom-btn:hover {
   color: #fff;
   border: 1px solid #fff;
   background-color: transparent;
@@ -117,4 +124,24 @@ input[type='text'] {
 
 #autoplay .form-check label {
   cursor: pointer;
+}
+
+/* card buttons */
+.custom-btn.save {
+  background-color: #fff;
+  color: #141414;
+}
+
+.custom-btn.save:hover {
+  background-color: #cc0000;
+  color: #fff;
+  border-color: #cc0000;
+}
+
+.color-grey {
+  color: #ccc;
+}
+
+.small-f-size {
+  font-size: 0.8vw;
 }

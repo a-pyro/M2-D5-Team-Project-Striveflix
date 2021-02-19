@@ -42,6 +42,7 @@
     <title>Hello, world!</title>
   </head>
   <body class="animate__animated animate__fadeIn">
+    <!-- HEADER E LOGO -->
     <header id="header" class="">
       <nav class="navbar navbar-light bg-transparent">
         <a class="navbar-brand" href="index.html">
@@ -49,7 +50,9 @@
         </a>
       </nav>
     </header>
-    <div class="container">
+
+    <!-- CORPO -------------------------- -->
+    <div class="container-custom">
       <main id="main" class="d-flex justify-content-center align-items-center">
         <!-- riga dove c'è tutta la card -->
         <div class="row edit-profile">
@@ -72,17 +75,19 @@
                   ></i>
                 </div>
               </div>
-              <!-- settings -->
+              <!-- settings --------------------------->
               <div class="col-8" id="settings">
-                <!-- row con tutte le col dei settings -->
+                <!-- ROW SETTINGs-------------------------->
                 <div class="row">
                   <!-- nome e lingua -->
-                  <div class="col-12" id="name">
+                  <div class="col-12 pl-0" id="name">
                     <!-- input nome -->
                     <input class="form-control mb-3" type="text" />
                     <!-- select lingua -->
                     <div class="form-group">
-                      <label for="selectLanguage">Language:</label>
+                      <label class="color-grey" for="selectLanguage"
+                        >Language:</label
+                      >
                       <select class="form-control" id="selectLanguage">
                         <option></option>
                         <option>2</option>
@@ -94,27 +99,27 @@
                   </div>
                   <!-- maturity settings -->
                   <div
-                    class="col-12 border-bottom border-top py-3"
+                    class="col-12 border-bottom border-top py-3 pl-0"
                     id="maturity"
                   >
-                    <p class="">Maturity Setting:</p>
+                    <p class="color-grey">Maturity Setting:</p>
                     <p
                       class="d-inline-block maturity-label py-1 px-2 text-uppercase font-weight-bold"
                     >
                       ALL MATURITY RATINGS
                     </p>
-                    <p class="text-nowrap">
+                    <p class="text-nowrap small-f-size">
                       Show titles of all maturity ratings for this profile.
                     </p>
                     <button
                       type="button"
-                      class="btn btn-outline-dark text-uppercase px-4"
+                      class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2"
                     >
                       edit
                     </button>
                   </div>
                   <!-- autoplay controls -->
-                  <div class="col-12 py-3" id="autoplay">
+                  <div class="col-12 py-3 pl-0" id="autoplay">
                     <h6>Autoplay controls</h6>
                     <!-- checkboxes -->
                     <div class="checkboxes d-flex flex-column">
@@ -126,7 +131,7 @@
                           id="defaultCheck1"
                         />
                         <label
-                          class="form-check-label ml-3 mt-1"
+                          class="form-check-label ml-2 mt-1 text-nowrap small-f-size"
                           for="defaultCheck1"
                         >
                           Autoplay next episode in a series on all devices.
@@ -140,7 +145,7 @@
                           id="defaultCheck2"
                         />
                         <label
-                          class="form-check-label ml-3 mt-1"
+                          class="form-check-label ml-2 mt-1 text-nowrap small-f-size"
                           for="defaultCheck2"
                         >
                           Autoplay previews whilst browsing on all devices.
@@ -152,11 +157,26 @@
               </div>
             </div>
           </div>
-          <!-- colonna dei bottoni -->
-          <div class="col-12 pt-3" id="cardButtons">
-            <button type="button" class="btn btn-primary">Primary</button>
-            <button type="button" class="btn btn-primary">Primary</button>
-            <button type="button" class="btn btn-primary">Primary</button>
+          <!-- BOTTONI ------------------------------------>
+          <div class="col-12 pt-4 pl-0" id="cardButtons">
+            <button
+              type="button"
+              class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2 mr-3 save"
+            >
+              save
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2 mr-3"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-dark text-uppercase px-4 custom-btn pt-2 mr-3"
+            >
+              delete profile
+            </button>
           </div>
         </div>
       </main>
