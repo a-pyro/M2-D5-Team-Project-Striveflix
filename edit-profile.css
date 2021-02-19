@@ -82,3 +82,23 @@ input[type='text'] {
   background-color: #141414;
   border-radius: 1px;
 }
+
+/* maturity settings */
+.maturity-label {
+  background-color: rgb(51, 51, 51);
+  font-size: 0.8rem;
+}
+
+#maturity p:last-child {
+  font-size: 0.7rem;
+}
+
+#maturity button {
+  color: grey;
+  border-radius: 1px;
+}
+#maturity button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
