@@ -69,3 +69,16 @@ body {
 /* #profilePic img {
   min-width: 168px;
 } */
+
+/* name and lingua */
+input[type='text'] {
+  background-color: rgb(102, 102, 102);
+  border-color: unset;
+  border-radius: 1px;
+}
+#selectLanguage {
+  width: 63px;
+  height: 30px;
+  background-color: #141414;
+  border-radius: 1px;
+}
