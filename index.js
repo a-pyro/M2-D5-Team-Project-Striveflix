@@ -355,3 +355,19 @@ function showNav() {
     }, 100);
   }
 }
+
+window.onload = async () => {
+  const respone = await fetch(
+    'https://striveschool-api.herokuapp.com/api/movies/docuseries',
+    {
+      method: 'GET',
+      headers: new Headers({
+        Authorization:
+          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUyMDNjNDg5YzI2ZjAwMTU3ZjljNDMiLCJpYXQiOjE2MTU5ODgzMzUsImV4cCI6MTYxNzE5NzkzNX0.ZkirlemsOm9gKIdP1GliGmMvD2oYPJDMHyPyrTjZkUU',
+      }),
+    }
+  );
+
+  const data = await respone.json();
+  console.log(data);
+};
