@@ -98,7 +98,7 @@ function ColCardComponent({ imageUrl, _id: id, name }) {
   return `
       <div class="col mb-3">
         <a href="detailpage.html?${id}">
-          <img src="${imageUrl}" alt="${name} pic"/>
+          <img src="${imageUrl}" class="" alt="${name} pic"/>
         </a>
       </div>
   `;

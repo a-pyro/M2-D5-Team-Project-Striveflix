@@ -7,6 +7,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
 
     <!-- Bootstrap CSS -->
     <link
@@ -22,107 +28,102 @@
     <title>Striveflix</title>
   </head>
   <body>
-    <div class="container">
-      <nav
-        class="navbar navbar-expand-lg navbar-dark sticky-top bg-transparent"
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-transparent">
+      <a class="navbar-brand" href="../index.html"
+        ><img
+          src="../images/logo.svg"
+          alt="netflix-logo"
+          width="160px"
+          height="40px"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <a class="navbar-brand" href="../index.html"
-          ><img
-            src="../images/logo.svg"
-            alt="netflix-logo"
-            width="160px"
-            height="40px"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Series</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Films</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New & Popular</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My List</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Backoffice</a>
+          </li>
+          <li class="nav-item edit-btn" id="editBtn">
+            <a class="nav-link" href="#"><i class="far fa-edit"></i></a>
+          </li>
+        </ul>
+
+        <div class="mr-5">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html"
-                >Home <span class="sr-only">(current)</span></a
+            <li>
+              <a href="#">
+                <i
+                  class="fas fa-search bg-transparent text-light mx-3 mt-3"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-gift bg-transparent text-light mx-3 mt-3"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-bell bg-transparent text-light mx-3 mt-3"></i>
+              </a>
+            </li>
+
+            <li class="dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Series</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Films</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">New & Popular</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">My List</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Backoffice</a>
+                <img
+                  src="https://occ-0-2835-2774.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABYnnca7HCf0z4YHtIK5R8MIGCeMyodAsxBYSBmMkYHqjSw46VWWyNQirfwxT-CkbxPkp-G84Wu-iOMwGG-r9QAs.png?r=f71"
+                  alt=""
+                />
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="edit-profile.html"
+                  >Edit Profile</a
+                >
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
             </li>
           </ul>
-
-          <div class="mr-5">
-            <ul class="navbar-nav mr-auto">
-              <li>
-                <a href="#">
-                  <i
-                    class="fas fa-search bg-transparent text-light mx-3 mt-3"
-                  ></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i
-                    class="fas fa-gift bg-transparent text-light mx-3 mt-3"
-                  ></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i
-                    class="fas fa-bell bg-transparent text-light mx-3 mt-3"
-                  ></i>
-                </a>
-              </li>
-
-              <li class="dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="https://occ-0-2835-2774.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABYnnca7HCf0z4YHtIK5R8MIGCeMyodAsxBYSBmMkYHqjSw46VWWyNQirfwxT-CkbxPkp-G84Wu-iOMwGG-r9QAs.png?r=f71"
-                    alt=""
-                  />
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="edit-profile.html"
-                    >Edit Profile</a
-                  >
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-            </ul>
-            <!--  -->
-          </div>
         </div>
-      </nav>
-
+      </div>
+    </nav>
+    <div class="container">
       <main class="row mt-5">
         <div class="col col-md-6 offset-md-3">
           <form id="mainForm">
@@ -194,6 +195,9 @@
               </button>
             </div>
           </form>
+          <select class="form-control form-control-lg d-none" id="select">
+            <option>Select a movie to edit</option>
+          </select>
         </div>
       </main>
     </div>

@@ -6,9 +6,18 @@ const form = document.getElementById('mainForm');
 const inputFields = Array.from(document.getElementsByTagName('input'));
 const textArea = document.getElementById('description');
 const submitBtn = document.getElementById('submitBtn');
-console.log(submitBtn);
+const editBtn = document.getElementById('editBtn');
+const select = document.getElementById('select');
+const deleteBtn = document.getElementById('deleteBtn');
+const putBtn = document.getElementById('putBtn');
+const imdb = [];
+
 // listeners
 form.addEventListener('submit', getInputData);
+editBtn.addEventListener('click', pickMovie);
+select.addEventListener('change', getSingleMovie);
+deleteBtn.addEventListener('click', deleteFilm);
+putBtn.addEventListener('click', editFilm);
 
 function getInputData(e) {
   e.preventDefault();
@@ -50,10 +59,118 @@ async function postData(movie) {
   }
 }
 
+function pickMovie(e) {
+  e.preventDefault();
+  const navLink = e.currentTarget;
+  getCategories();
+  toggleForm();
+}
+
+// GET DATA FOR SELETCT
+async function getCategories() {
+  try {
+    const respone = await fetch(
+      'https://striveschool-api.herokuapp.com/api/movies/',
+      {
+        method: 'GET',
+        headers: new Headers({
+          Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUyMDNjNDg5YzI2ZjAwMTU3ZjljNDMiLCJpYXQiOjE2MTU5ODgzMzUsImV4cCI6MTYxNzE5NzkzNX0.ZkirlemsOm9gKIdP1GliGmMvD2oYPJDMHyPyrTjZkUU',
+        }),
+      }
+    );
+    const data = await respone.json();
+    console.log('categories: ', data);
+    getDatas(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function getDatas(categories) {
+  try {
+    const arrayOfPromises = await categories.map(async (category) => {
+      const resp = await fetch(
+        `https://striveschool-api.herokuapp.com/api/movies/${category}`,
+        {
+          method: 'GET',
+          headers: new Headers({
+            Authorization:
+              'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUyMDNjNDg5YzI2ZjAwMTU3ZjljNDMiLCJpYXQiOjE2MTU5ODgzMzUsImV4cCI6MTYxNzE5NzkzNX0.ZkirlemsOm9gKIdP1GliGmMvD2oYPJDMHyPyrTjZkUU',
+          }),
+        }
+      );
+      const data = await resp.json();
+      return data;
+    });
+
+    const dataFromPromiseAll = await Promise.all(arrayOfPromises);
+    console.log(dataFromPromiseAll);
+    const unifiedDatas = dataFromPromiseAll.reduce(
+      (acc, cv) => acc.concat(cv),
+      []
+    );
+    // push in local
+    unifiedDatas.forEach((movie) => imdb.push(movie));
+    renderOptions(unifiedDatas);
+
+    //render Data
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function renderOptions(data) {
+  select.innerHTML += data.reduce((acc, cv) => acc + OptionComponent(cv), '');
+}
+
+function OptionComponent({ name, category, _id: id }) {
+  return `
+  <option onclick="fuckme()" value="${id}"><span>${name}</span>:<span>${category}</span></option>
+  `;
+}
+
+async function getSingleMovie() {
+  const id = select.value;
+  const itemToEdit = imdb.find((movie) => movie._id === id);
+  console.log(id);
+  console.log(itemToEdit);
+  const { name, description, category, imageUrl } = itemToEdit;
+  inputFields.forEach((field) => {
+    switch (field.id) {
+      case 'name':
+        field.value = name;
+        break;
+      case 'category':
+        field.value = category;
+        break;
+      case 'imageUrl':
+        field.value = imageUrl;
+        break;
+    }
+  });
+  textArea.value = description;
+  toggleForm();
+  toggleBtns();
+}
+
+async function deleteFilm() {}
+
+async function editFilm() {}
+
 // helper functions
 function clearForm() {
   inputFields.forEach((field) => (field.value = ''));
   textArea.value = '';
+}
+function toggleBtns() {
+  submitBtn.classList.toggle('d-none');
+  putBtn.classList.toggle('d-none');
+  deleteBtn.classList.toggle('d-none');
+}
+function toggleForm() {
+  form.classList.toggle('d-none');
+  select.classList.toggle('d-none');
 }
 
 /* 
