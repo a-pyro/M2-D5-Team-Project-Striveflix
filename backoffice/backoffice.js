@@ -58,10 +58,10 @@ function clearForm() {
 
 /* 
 function to grab stuff from netflix
-const objectGenreBuilder = () => {
-  const row4 = document.getElementById('row-4');
-  const links = Array.from(row4.querySelectorAll('p[class="fallback-text"]'));
-  const images = Array.from(row4.querySelectorAll('img.boxart-image'));
+const objectGenreBuilder = (rowNumer) => {
+  const row = document.getElementById('row-`${rowNumer}`');
+  const links = Array.from(row.querySelectorAll('p[class="fallback-text"]'));
+  const images = Array.from(row.querySelectorAll('img.boxart-image'));
   const genreTitle = document.querySelector('.genreTitle');
   const genre = links.reduce((acc, cv, idx) => {
     acc.push({
@@ -323,6 +323,7 @@ const allMovies = [
   ...actionAdventure,
 ];
 
+// function to feed the back-office
 const feedBackOffice = () => {
   allMovies.forEach((movie) => {
     const { name, description, imageUrl, category } = movie;

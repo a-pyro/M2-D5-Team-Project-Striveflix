@@ -356,18 +356,49 @@ function showNav() {
   }
 }
 
-window.onload = async () => {
-  const respone = await fetch(
-    'https://striveschool-api.herokuapp.com/api/movies/',
-    {
-      method: 'GET',
-      headers: new Headers({
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUyMDNjNDg5YzI2ZjAwMTU3ZjljNDMiLCJpYXQiOjE2MTU5ODgzMzUsImV4cCI6MTYxNzE5NzkzNX0.ZkirlemsOm9gKIdP1GliGmMvD2oYPJDMHyPyrTjZkUU',
-      }),
-    }
-  );
+window.onload = getCategories();
+async function getCategories() {
+  try {
+    const respone = await fetch(
+      'https://striveschool-api.herokuapp.com/api/movies/',
+      {
+        method: 'GET',
+        headers: new Headers({
+          Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUyMDNjNDg5YzI2ZjAwMTU3ZjljNDMiLCJpYXQiOjE2MTU5ODgzMzUsImV4cCI6MTYxNzE5NzkzNX0.ZkirlemsOm9gKIdP1GliGmMvD2oYPJDMHyPyrTjZkUU',
+        }),
+      }
+    );
+    const data = await respone.json();
+    console.log('categories: ', data);
+    getDatas(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-  const data = await respone.json();
-  console.log(data);
-};
+async function getDatas(categories) {
+  try {
+    const arrayOfPromises = await categories.map(async (category) => {
+      const resp = await fetch(
+        `https://striveschool-api.herokuapp.com/api/movies/${category}`,
+        {
+          method: 'GET',
+          headers: new Headers({
+            Authorization:
+              'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDUyMDNjNDg5YzI2ZjAwMTU3ZjljNDMiLCJpYXQiOjE2MTU5ODgzMzUsImV4cCI6MTYxNzE5NzkzNX0.ZkirlemsOm9gKIdP1GliGmMvD2oYPJDMHyPyrTjZkUU',
+          }),
+        }
+      );
+      const data = await resp.json();
+      return data;
+    });
+
+    const responseFromPromiseAll = await Promise.all(arrayOfPromises);
+    console.log(responseFromPromiseAll);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function renderData(data) {}
