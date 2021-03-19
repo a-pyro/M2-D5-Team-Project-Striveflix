@@ -238,9 +238,120 @@ const actionAdventure = [
   },
 ];
 
-const allMovies = [
-  ...docuseries,
-  ...comedyProgrammes,
-  ...sciFi,
-  ...actionAdventure,
+const scienceNature = [
+  {
+    name: 'Below Deck',
+    description: 'some dummy text that can be edited later',
+    category: 'science & nature tv',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQbDsl4tHdiRVXnY_CQcqdzSxqclBGddy52dvSGFcp38UDaBPCym0AwCU9Dm3KzhqVW2YYu3bccISkznll4YSkVy_RE.webp?r=690',
+  },
+  {
+    name: "The World's Most Extraordinary Homes",
+    description: 'some dummy text that can be edited later',
+    category: 'science & nature tv',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRjSh9WtZPLKuZr7C6DrzhydJWlxq3wYfh8Iq6egAXpQCX3kl8fgDfXDsYsRMR8fR2mmfKd0GchLPfSpQTsIEUsQFV1SbXGiQUleoOzPcb0VWXMlBU8ouCS3lT2J.jpg?r=91c',
+  },
+  {
+    name: 'Battlefish',
+    description: 'some dummy text that can be edited later',
+    category: 'science & nature tv',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdifpZwsMwaZdnqT3O4ityO-RmBmEY2OaiZ0YCPf8ivoCGw4GZe133rLrA7Z2M_vYAEElE9_IaG5XszvoI4H2D5PvinZAuSMnfmmmZWTmFs8IRVKblo10NokbhXm.jpg?r=9f3',
+  },
+  {
+    name: 'White Rabbit Project',
+    description: 'some dummy text that can be edited later',
+    category: 'science & nature tv',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABc-MD-NM_29zIQtW8kGjBPqwzvLTtDcz62bO_oqErkvpYnye62GTn0L9CRF3Zptcj6uPy_ntGIZWxa-eHDg8f8Kc6-Ak6_hu9TZFzNLz63OZbWs_i4_2Io3bxefb.jpg?r=a41',
+  },
+  {
+    name: 'Stunt Science',
+    description: 'some dummy text that can be edited later',
+    category: 'science & nature tv',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABc3xLLa9fYlIrwMfjw7B27bRKStLRE0XjWkjWjRuZN4q1wSUWTy2KTr3qFBhCfMoLhP3h8Tc8KngB2Drh4W5a08J7zs.webp?r=a32',
+  },
+  {
+    name: 'Cabins in the Wild with Dick Strawbridge',
+    description: 'some dummy text that can be edited later',
+    category: 'science & nature tv',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdvcEUUy7-9tV-7fPPo6-79sjiEkvGOrjCkrcZ5GcXkeddg7zv7xlt2QoQOX_2zdz8dbGYpnYGwQcMj_Z1bRxOZqklA.webp?r=acd',
+  },
+  {
+    name: 'Afflicted',
+    description: 'some dummy text that can be edited later',
+    category: 'science & nature tv',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcz5YykERKSo_n4WhhgVvzhw5I9yrClSYCYhS2KFZqiix5vdHEROvdo2ESzqqaEUwQSE-4xd4V-8-5HH--m9Zdp_EC4I4sFILQWhG-R3LmMJeE5hFJsX7FbHgLhY.jpg?r=72f',
+  },
+  {
+    name: 'Below Deck',
+    description: 'some dummy text that can be edited later',
+    category: 'science & nature tv',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQbDsl4tHdiRVXnY_CQcqdzSxqclBGddy52dvSGFcp38UDaBPCym0AwCU9Dm3KzhqVW2YYu3bccISkznll4YSkVy_RE.webp?r=690',
+  },
+];
+
+const misteries = [
+  {
+    name: 'The Haunting of Hill House',
+    description: 'some dummy text that can be edited later',
+    category: 'mystery programmes',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT-ObSX17ha3dta774D0lbUwLReJLCDPER9-ogpffzTdJOjVq-ds6t4TojBe5WKDZtDQV06rdgr9FDnP4I6BZS1IPV1kmDazoK9W7TLVY_UTqlc9HTL9ZxglXDb3.jpg?r=4cd',
+  },
+  {
+    name: 'Scream',
+    description: 'some dummy text that can be edited later',
+    category: 'mystery programmes',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABan9xKHILviumq5HQdLBMKR7Hv-XixbgVDGh_7LRx0tSCVM4Mv7NUnP14H7RpuPN5Vga_ucVIDsff-aHMOuxf2rTZhEDSd4v915Fa-uBPeqf5JDDLIutmaw_8ILU.jpg?r=534',
+  },
+  {
+    name: 'Glitch',
+    description: 'some dummy text that can be edited later',
+    category: 'mystery programmes',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdRvhORF8N_HWQN0hD9DJtDB1reFyiWgeNQCQ6DjoCT1l7mxdm6iGjXaMEzGZCdFfeJhxNH6Ns-vpCIuOBArJpWuWoozxqtzhcAmIO09_rbRKl1wbae6KeISz0j3.jpg?r=036',
+  },
+  {
+    name: 'Slasher',
+    description: 'some dummy text that can be edited later',
+    category: 'mystery programmes',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcLJiz658z8kfgnxPJvrFu0s3qaw8SrHMDWZpPSa76lBMTbG2X1RQ3TvytzvfHDQQ2G-wmKPbD9c6B3ffPYvLrn18ocXeZR9r5uEehHMo8v0gQaXR1lu90nFGZ5o.jpg?r=505',
+  },
+  {
+    name: 'Hemlock Grove',
+    description: 'some dummy text that can be edited later',
+    category: 'mystery programmes',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQrhkSV8JFglzafBqRS85_DKEO3jnRhkHVv-uuMbTZruslH8PTUQ_2wVlWSa_LXtYwDLxpcBQN8-2XlN453pPtObGjZ8BtbYT20iPZ_v0sc7tr1blvjOjjE-kYyV.jpg?r=368',
+  },
+  {
+    name: 'Chambers',
+    description: 'some dummy text that can be edited later',
+    category: 'mystery programmes',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe15SsDw7FMYksM0G40_bbvzzkufhrWtWISAfymwAT-_uJddLAjhcGhrMdFNaUmdHAn73mOEdtXk_KzE4FyPsYax1Su6nuxWAvqv4XCJQLiPpf_2-QamfiTL-9eG.jpg?r=0f9',
+  },
+  {
+    name: 'The Guest',
+    description: 'some dummy text that can be edited later',
+    category: 'mystery programmes',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABYjIZu8E1serAV7RV9xxlhnkB-ahGhAyejjEXPlOdMYIOcOqcX8zTp2qdeVtom29E0X8vFzXEoylE7SaAAG8GDRBi-Q.webp?r=8a0',
+  },
+  {
+    name: 'The Haunting of Hill House',
+    description: 'some dummy text that can be edited later',
+    category: 'mystery programmes',
+    imageUrl:
+      'https://occ-0-2938-784.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT-ObSX17ha3dta774D0lbUwLReJLCDPER9-ogpffzTdJOjVq-ds6t4TojBe5WKDZtDQV06rdgr9FDnP4I6BZS1IPV1kmDazoK9W7TLVY_UTqlc9HTL9ZxglXDb3.jpg?r=4cd',
+  },
 ];
