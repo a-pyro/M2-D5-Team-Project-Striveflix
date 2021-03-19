@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../edit-profile.css" />
     <link rel="stylesheet" href="./backoffice.css" />
 
     <title>Striveflix</title>
@@ -123,6 +124,80 @@
           </div>
         </div>
       </nav>
+
+      <main class="row mt-5">
+        <div class="col col-md-6 offset-md-3">
+          <form id="mainForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                aria-describedby="name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="description" class="d-block">Description</label>
+              <textarea
+                class="w-100"
+                name="description"
+                id="description"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="category">Category</label>
+              <input
+                type="text"
+                class="form-control"
+                id="category"
+                aria-describedby="category"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUrl">Cover Url</label>
+              <input
+                type="text"
+                class="form-control"
+                id="imageUrl"
+                aria-describedby="imageUrl"
+                required
+              />
+            </div>
+
+            <!-- submit btn -->
+            <button
+              id="submitBtn"
+              type="submit"
+              class="btn btn-primary mb-3 btn-block custom-btn save"
+            >
+              Submit
+            </button>
+
+            <div
+              class="btn-group w-100"
+              role="group"
+              aria-label="Basic example"
+            >
+              <button id="putBtn" type="button" class="btn btn-info d-none">
+                Sumbit Modifications
+              </button>
+
+              <button
+                id="deleteBtn"
+                type="button"
+                class="btn btn-danger d-none"
+              >
+                Delete
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

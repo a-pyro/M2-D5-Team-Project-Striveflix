@@ -81,7 +81,8 @@ body {
 }
 
 /* name and lingua */
-input[type='text'] {
+input[type='text'],
+textarea {
   background-color: rgb(102, 102, 102);
   border-color: unset;
   border-radius: 1px;
