@@ -25,7 +25,7 @@ function showNav() {
   }
 }
 
-window.onload = getCategories();
+window.onload = getCategories;
 
 async function getCategories() {
   try {
@@ -40,7 +40,7 @@ async function getCategories() {
       }
     );
     const data = await respone.json();
-    console.log('categories: ', data);
+    // console.log('categories: ', data);
     getDatas(data);
   } catch (error) {
     console.log(error);
@@ -49,7 +49,7 @@ async function getCategories() {
 
 async function getDatas(categories) {
   try {
-    const arrayOfPromises = await categories.map(async (category) => {
+    const arrayOfPromises = categories.map(async (category) => {
       const resp = await fetch(
         `https://striveschool-api.herokuapp.com/api/movies/${category}`,
         {
@@ -63,7 +63,7 @@ async function getDatas(categories) {
       const data = await resp.json();
       return data;
     });
-
+    console.log(arrayOfPromises);
     const dataFromPromiseAll = await Promise.all(arrayOfPromises);
     console.log(dataFromPromiseAll);
     renderData(dataFromPromiseAll);

@@ -171,6 +171,8 @@ async function deleteFilm() {
     );
 
     if (resp.ok) {
+      const optionToRemove = document.getElementById(globalId);
+      optionToRemove.remove();
       console.log(resp);
       clearForm();
       toggleForm();
