@@ -332,12 +332,10 @@ function imgSource() {
   }
 }
 
-console.log(imgDom);
-
 const nav = document.querySelector('nav');
 window.addEventListener('scroll', showNav);
 function showNav() {
-  console.log(pageYOffset);
+  // console.log(pageYOffset);
   if (pageYOffset > 250) {
     if (nav.classList.contains('backdrop-blur')) return;
     nav.style.transform = 'translateY(-200px)';
