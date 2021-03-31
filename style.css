@@ -88,11 +88,3 @@ footer h6 {
 .row {
   overflow-x: auto;
 }
-
-.carousel-control-next {
-  margin-right: -90px;
-}
-
-.carousel-control-prev {
-  margin-left: -90px;
-}
